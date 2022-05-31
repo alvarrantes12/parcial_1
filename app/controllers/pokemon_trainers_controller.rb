@@ -46,6 +46,6 @@ class PokemonTrainersController < ApplicationController
   end
 
   def pokemon_trainer_params
-    params.require(:pokemon_trainer).permit(:first_name, :last_name, :region, :id_number)
+    params.require(:pokemon_trainer).permit(:first_name, :last_name, :region, :id_number, :level)
   end
 end

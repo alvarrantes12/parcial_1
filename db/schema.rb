@@ -19,6 +19,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_29_031817) do
     t.string "last_name"
     t.string "region"
     t.string "id_number"
+    t.integer "level"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

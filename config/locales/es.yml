@@ -1,2 +1,22 @@
 es:
-  hello: "Hello world"
+  application:
+    list_of: Lista de %{model}
+    new: Nuevo %{model}
+    show: Mostrar %{model}
+    edit: Editar %{model}
+    back: Volver a %{model}
+    destroy: Eliminar %{model}
+  activerecord:
+    modules:
+      pokemon_trainer:
+        one: Comediante
+        other: Comediantes
+  attributes:
+      pokemon_trainer:
+        first_name: Nombre
+        last_name: Apellido
+        id_number: Numero de ID
+        levels:
+          high: Alto
+          medium: Medio
+          low: Bajo              

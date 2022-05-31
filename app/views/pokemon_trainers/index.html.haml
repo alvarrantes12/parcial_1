@@ -8,14 +8,14 @@
   %table.table.table-striped
     %thread
       %tr
-        %th= "Nombre"
-        %th= "Apellido"
-        %th= "Region"
-        %th= "Identificación"
-        %th= "Nivel"
-        %th
-        %th
-        %th
+      %th= t('attributes.pokemon_trainer.first_name')
+      %th= t('attributes.pokemon_trainer.last_name')
+      %th= t('attributes.pokemon_trainer.region')
+      %th= t('attributes.pokemon_trainer.id_number')
+      %th= t('attributes.pokemon_trainer.level')
+      %th
+      %th
+      %th
     %tbody
       - @pokemon_trainers.each do |pokemon_trainer|
         %tr
@@ -23,7 +23,7 @@
           %td= pokemon_trainer.last_name
           %td= pokemon_trainer.region
           %td= pokemon_trainer.id_number
-          %td= ""
+          %td= t("attributes.pokemon_trainer.levels.#{pokemon_trainer.level}") 
           %td= link_to "Ver", pokemon_trainer, class: "btn btn-info"
           %td= link_to "Editar", edit_pokemon_trainer_path(pokemon_trainer), class: "btn btn-success"
           %td= link_to "Eliminar", pokemon_trainer, method: :delete, class: "btn btn-danger",

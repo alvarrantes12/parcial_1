@@ -11,6 +11,10 @@
   .form-group.ml-4.mr-4
     = f.label :id_number, class: "form-label required"
     = f.number_field :id_number, autofocus: true, class: "form-control"
+  .form-group.ml-4.mr-4
+    = f.label :level, class: 'form-label required'
+    = f.select(:level, options_for_select(levels, @pokemon_trainer.level),
+                          {prompt:"Seleccione"}, class:'form-control') 
 
   .row
     .offset-3.col-3
