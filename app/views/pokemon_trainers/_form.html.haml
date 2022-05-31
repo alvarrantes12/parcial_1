@@ -1,0 +1,19 @@
+= form_for @pokemon_trainer, validate: true do |f|
+  .form-group.ml-4.mr-4
+    = f.label :first_name, class: "form-label required"
+    = f.text_field :first_name, autofocus: true, class: "form-control"
+  .form-group.ml-4.mr-4
+    = f.label :last_name, class: "form-label required"
+    = f.text_field :last_name, autofocus: true, class: "form-control"
+  .form-group.ml-4.mr-4
+    = f.label :region, class: "form-label required"
+    = f.text_field :region, autofocus: true, class: "form-control"
+  .form-group.ml-4.mr-4
+    = f.label :id_number, class: "form-label required"
+    = f.number_field :id_number, autofocus: true, class: "form-control"
+
+  .row
+    .offset-3.col-3
+      = link_to "Atrás", pokemon_trainers_path, class: "btn btn-secondary btn-block"
+    .col-3
+      = button_tag "Guardar" , class: "btn btn-outline-success btn-block", 'data-disable-with': "Guardando"
