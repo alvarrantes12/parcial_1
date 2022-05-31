@@ -1,2 +1,16 @@
 es:
-  hello: "Hello world"
+  application:
+    cruds_available: CRUDs disponibles
+  activerecord:
+
+    attributes: 
+      pokemon_trainer:
+        first_name: Nombre
+        last_name: Apellido
+        region: Región
+        id_number: Identificación
+        level: Nivel
+        levels:
+          high: Alto
+          medium: Medio
+          low: Bajo
