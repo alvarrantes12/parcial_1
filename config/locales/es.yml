@@ -13,6 +13,10 @@ es:
     want_to_delete: Desea eliminarlo
     accept: Aceptar
     reject: Cancelar
+    created: creado
+    deleted: eliminado
+    updated: actualizado
+
   activerecord:
     modules:
       pokemon_trainer:
