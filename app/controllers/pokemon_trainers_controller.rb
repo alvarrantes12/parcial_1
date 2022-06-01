@@ -1,6 +1,7 @@
 class PokemonTrainersController < ApplicationController
   before_action :set_pokemon_trainer, only: %i[ show edit update destroy ]
 
+
   def index
     @pokemon_trainers = PokemonTrainer.all
   end
@@ -46,6 +47,6 @@ class PokemonTrainersController < ApplicationController
   end
 
   def pokemon_trainer_params
-    params.require(:pokemon_trainer).permit(:first_name, :last_name, :region, :id_number)
+    params.require(:pokemon_trainer).permit(:first_name, :last_name, :region, :id_number, :level)
   end
 end
