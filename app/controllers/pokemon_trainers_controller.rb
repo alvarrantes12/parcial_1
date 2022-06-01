@@ -1,5 +1,6 @@
 class PokemonTrainersController < ApplicationController
   before_action :set_pokemon_trainer, only: %i[ show edit update destroy ]
+  
 
   def index
     @pokemon_trainers = PokemonTrainer.all
