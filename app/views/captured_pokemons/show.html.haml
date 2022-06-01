@@ -3,20 +3,20 @@
   .card
     .card-body
       %h5.card-title
-        = "Location"
+        = t('activerecord.attributes.captured_pokemon.location')
       %p.card-text &nbsp #{@captured_pokemon.location}
       
 
       %h5.card-title
-        = "Entrenador"
+        = t('activerecord.modules.pokemon_trainer.one')
       %p.card-text &nbsp #{@captured_pokemon.pokemon_trainer.first_name} #{@captured_pokemon.pokemon_trainer.last_name}
 
       %h5.card-title
-        = "Pokemon"
+        = t('activerecord.modules.pokemon.one')
       %p.card-text &nbsp #{@captured_pokemon.pokemon.name}
       
   .row.mt-3
     .offset-3.col-3
-      = link_to "Atrás", captured_pokemons_path, class: "btn btn-secundary btn-block"
+      = link_to t('application.back_to', model: t('activerecord.modules.captured_pokemon.other')), captured_pokemons_path, class: "btn btn-secundary btn-block"
 
 

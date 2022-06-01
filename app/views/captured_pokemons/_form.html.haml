@@ -15,6 +15,6 @@
 
   .row
     .offset-3.col-3
-      = link_to "Atrás", captured_pokemons_path, class: "btn btn-secondary btn-block"
+      = link_to t('application.back_to', model: t('activerecord.modules.captured_pokemon.other')), captured_pokemons_path, class: "btn btn-secondary btn-block"
     .col-3
-      = button_tag "Guardar" , class: "btn btn-outline-success btn-block", 'data-disable-with': "Guardando"
+      = button_tag t('application.save') , class: "btn btn-outline-success btn-block", 'data-disable-with': t('application.saving')

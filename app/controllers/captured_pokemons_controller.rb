@@ -22,7 +22,7 @@ class CapturedPokemonsController < ApplicationController
     @captured_pokemon = CapturedPokemon.new(captured_pokemon_params)
 
     if @captured_pokemon.save
-      redirect_to captured_pokemon_url(@captured_pokemon), notice: "Captured pokemon was successfully created." 
+      redirect_to captured_pokemon_url(@captured_pokemon), notice: t('application.created', model: t('activerecord.modules.captured_pokemon.one') ) 
     else
       render :new, status: :unprocessable_entity 
     end
@@ -30,7 +30,7 @@ class CapturedPokemonsController < ApplicationController
 
   def update
     if @captured_pokemon.update(captured_pokemon_params)
-      redirect_to captured_pokemon_url(@captured_pokemon), notice: "Captured pokemon was successfully updated." 
+      redirect_to captured_pokemon_url(@captured_pokemon), notice: t('application.uptated', model: t('activerecord.modules.captured_pokemon.one') ) 
     else
       render :edit, status: :unprocessable_entity 
     end
@@ -38,7 +38,7 @@ class CapturedPokemonsController < ApplicationController
 
   def destroy
     @captured_pokemon.destroy
-    redirect_to captured_pokemons_url, notice: "Captured pokemon was successfully destroyed." 
+    redirect_to captured_pokemons_url, notice: t('application.destroyed', model: t('activerecord.modules.captured_pokemon.one') )
   end
 
   private
