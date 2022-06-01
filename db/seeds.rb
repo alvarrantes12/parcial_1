@@ -1,7 +1,6 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+PokemonTrainer.create!(first_name: "Carlos", last_name: "Escami", region: "Kanto", id_number: "88888888", level: 2)
+PokemonTrainer.create!(first_name: "Angel", last_name: "Amaya", region: "Kanto", id_number: "23456789", level: 0)
+PokemonTrainer.create!(first_name: "Andy", last_name: "Ramirez", region: "Kanto", id_number: "34567812", level: 1)
+PokemonTrainer.create!(first_name: "Rafael", last_name: "Ramos", region: "Kanto", id_number: "12345789", level: 2)
+PokemonTrainer.create!(first_name: "Miguel", last_name: "Pelaes", region: "Kanto", id_number: "93451891", level: 2)
+PokemonTrainer.create!(first_name: "Fernando", last_name: "Rímolo", region: "Kanto", id_number: "67676767", level: 1)
