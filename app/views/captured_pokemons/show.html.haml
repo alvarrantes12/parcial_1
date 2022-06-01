@@ -1,0 +1,17 @@
+%p#notice= notice
+.div.m-4
+  .card
+    .card-body
+      %h5.card-title
+        = "Ubicación"
+      %p.card-text &nbsp #{@captured_pokemon.location}
+      %h5.card-title
+        = "Entrenador Pokemon"
+      %p.card-text &nbsp #{@captured_pokemon.pokemon_trainer.first_name} #{@captured_pokemon.pokemon_trainer.last_name} #{@captured_pokemon.pokemon_trainer.region} #{@captured_pokemon.pokemon_trainer.id_number} 
+      %h5.card-title
+        = "Pokemon"
+      %p.card-text &nbsp #{@captured_pokemon.pokemon.name}
+  
+  .row.mt-3
+    .offset-3.col-3
+      = link_to "Volver", captured_pokemons_path, class: "btn btn-secundary btn-block"

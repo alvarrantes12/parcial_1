@@ -1,0 +1,20 @@
+= form_for @captured_pokemon, validate: true do |f|
+  .form-group.ml-4.mr-4
+    = f.label :location, class: "form-label required"
+    = f.text_field :location, autofocus: true, class: "form-control"
+
+  .form-group.ml-4.mr-4
+    = f.label :pokemon_trainer_id, class: 'form-label required'
+    = f.select(:pokemon_trainer_id, options_for_select(@pokemon_trainers, @captured_pokemon.pokemon_trainer),
+                        {prompt:"Seleccione"}, class:'form-control')
+
+  .form-group.ml-4.mr-4
+    = f.label :pokemon_id, class: 'form-label required'
+    = f.select(:pokemon_id, options_for_select(@pokemons, @captured_pokemon.pokemon),
+                        {prompt:"Seleccione"}, class:'form-control')
+  
+  .row
+    .offset-3.col-3
+      = link_to "Volver", captured_pokemons_path, class: "btn btn-secondary btn-block"
+    .col-3
+    = button_tag "Guardar", class: "btn btn-outline-sucess btn-block", 'data-disable-with': "Guardando"

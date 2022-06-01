@@ -5,7 +5,6 @@ class CreatePokemonTrainers < ActiveRecord::Migration[7.0]
       t.string :last_name
       t.string :region
       t.string :id_number
-      t.integer :level
 
       t.timestamps
     end
