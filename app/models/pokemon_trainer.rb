@@ -11,4 +11,8 @@ class PokemonTrainer < ApplicationRecord
     validates :id_number, uniqueness: true
 
     enum level: { low: 1, medium: 2, high: 3 }
+
+
+    has_many :captured_pokemons
+    has_many :pokemons, through: :captured_pokemons
 end

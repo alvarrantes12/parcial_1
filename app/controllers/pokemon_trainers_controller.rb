@@ -17,7 +17,7 @@ class PokemonTrainersController < ApplicationController
     @pokemon_trainer = PokemonTrainer.new(pokemon_trainer_params)
 
     if @pokemon_trainer.save
-      redirect_to pokemon_trainer_url(@pokemon_trainer), notice: "Pokemon trainer was successfully created."
+      redirect_to pokemon_trainer_url(@pokemon_trainer), notice: "Pokemon trainer was successfully created ."
     else
       render :new, status: :unprocessable_entity
     end

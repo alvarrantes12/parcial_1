@@ -1,0 +1,14 @@
+= form_with(model: captured_pokemon) do |form|
+  - if captured_pokemon.errors.any?
+    %div{:style => "color: red"}
+      %h2
+        = pluralize(captured_pokemon.errors.count, "error")
+        prohibited this captured_pokemon from being saved:
+      %ul
+        - captured_pokemon.errors.each do |error|
+          %li= error.full_message
+  %div
+    = form.label :location, style: "display: block"
+    = form.text_field :location
+  %div
+    = form.submit

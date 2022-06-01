@@ -1,11 +1,40 @@
 es:
   application:
     available_cruds: Crud disponibles
+    list_of: Lista de %{model}
+    choose: Seleccione
+    go_back: Volver
+    save: Guardar
+    saving: Guardando...
+    edit: Editar %{model}
+    edit: Editar
+    new: Nuevo %{model}
+    see: Ver
+    delete: Eliminar
+    ok: Aceptar    
+    cancel: Cancelar
   activerecord:
     modules:
+      pokemon_trainer:
+        one: Entrenador pokemon
+        other: Entrenadores pokemon
+      pokemon:
+        one: Pokemon
+        other: Pokemons
+      captured_pokemon:
+        one: Pokemon capturado
+        other: Pokemons capturados
     attributes:
       pokemon_trainer:
+        first_name: Nombre
+        last_name: Apellido
+        region: Región
+        id_number: Identificación
+        level: Nivel
         levels:
           low: Bajo
           medium: Medio
           high: Alto
+      
+      
+

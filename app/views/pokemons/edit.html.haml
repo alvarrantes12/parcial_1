@@ -1,0 +1,7 @@
+%h1 Editing pokemon
+= render "form", pokemon: @pokemon
+%br/
+%div
+  = link_to "Show this pokemon", @pokemon
+  |
+  \#{link_to "Back to pokemons", pokemons_path}
