@@ -38,10 +38,10 @@ es:
         name: Nombre
     modules:
       pokemon_trainer:
-        one: comendiante
-        first_upper_one: Comendiante
-        other: comendiantes
-        first_upper_other: Comendiantes
+        one: entrenador pokemon
+        first_upper_one: Entrenador Pokemon
+        other: entrenadores pokememon
+        first_upper_other: Entrenadores pokemon
       captured_pokemon:
         one: pokemon capturado
         first_upper_one: Pokemon capturado
@@ -52,18 +52,3 @@ es:
         first_upper_one: Pokemon
         other: pokemons
         first_upper_other: Pokemons
-    errors:
-      models:
-        comedian:
-          attributes:
-            first_name:
-              blank: no puede estar vacio
-              too_long: debe tener menos de 10 caracteres
-            last_name:
-              blank: no puede estar vacio
-              too_long: debe tener menos de 15 caracteres
-            id_number:
-              blank: no puede estar vacia
-              taken: ya existe
-              too_short: debe tener más de 8 caracteres
-              too_long: debe tener menos de 10 caracteres
