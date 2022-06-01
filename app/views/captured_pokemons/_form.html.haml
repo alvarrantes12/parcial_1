@@ -1,0 +1,19 @@
+= form_for @captured_pokemon, validate: true do |f|
+  - if  @captured_pokemon.errors.any?
+    %div{:style => 'color: red'}
+      %h2
+        = t('application.can_not_be_saved', model: t('activerecord.modules.captured_pokemons.one'))
+        = "#{@captured_pokemon.errors.count} #{'error'.pluralize(@captured_pokemon.errors.count)}"
+      %ul
+        -  @captured_pokemon.errors.each do |error|
+          %li= error.full_message
+  .form-group.ml-4.mr-4
+    = f.label :location, class: "form-label required"
+    = f.text_field :location, autofocus: true, class: "form-control"
+
+
+  .row 
+    .offset-3.col-3 
+      = link_to t('application.back'), captured_pokemons_path, class: "btn btn-secondary btn-block"
+    .col-3  
+      = button_tag t('application.save'), class: "btn btn-outline-success btn-block", 'data-disable-with': t('application.saving')

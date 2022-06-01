@@ -37,14 +37,21 @@ es:
       pokemon:
         name: Nombre
 
+      captured_pokemon:
+        location: Locación
+
     modules:
       pokemon_trainers:
         one: Entrenador Pokemón
-        other: Entrenadores Pokemón
+        other: Entrenadores Pokemones
         
       pokemons:
         one: Pokemón
         other: Pokemones
+
+      captured_pokemons:
+        one: Pokémon capturado
+        other: Pokemones capturados
 
     errors:
       models:

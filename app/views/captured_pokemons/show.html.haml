@@ -1,0 +1,12 @@
+%p#notice= notice
+
+
+.card.ml-4.m-4
+  .card-body 
+    %h5.card-title
+      = "#{t('activerecord.attributes.captured_pokemon.location')}:"
+    %p.card-text &nbsp #{@captured_pokemon.location}
+
+.row.mt-3 
+  .offset-3.col-3 
+    = link_to t('application.back'), captured_pokemons_path, class: "btn btn-secondary btn-block"
