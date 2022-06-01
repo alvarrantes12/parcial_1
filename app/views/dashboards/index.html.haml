@@ -1,10 +1,10 @@
 .div.m-4
   %h1.mb-4
-    = "Crud disponibles"
+    = t('application.CRUDSdisposable')
 
 .float-left.ml-4
   = link_to "Entrenadores Pokemon", pokemon_trainers_path, class: 'btn btn-primary'
 .float-left.ml-4
-  = link_to "Pokemons", pokemon_trainers_path, class: 'btn btn-primary'
+  = link_to "Pokemons", pokemons_path, class: 'btn btn-primary'
 .float-left.ml-4
-  = link_to "Pokemons atrapados", pokemon_trainers_path, class: 'btn btn-warning'
+  = link_to "Pokemons atrapados", captured_pokemons_path, class: 'btn btn-primary'

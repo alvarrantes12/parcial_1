@@ -1,0 +1,16 @@
+%p#notice= notice
+
+.card.ml-4.m-4
+  .card-body
+    %h5.card-tittle 
+      = t('activerecord.attributes.captured_pokemon.location')
+    %p.card-text &nbsp #{@captured_pokemon.location} 
+    %h5.card-tittle 
+      = t('activerecord.attributes.pokemon_trainer.first_name')
+    %p.card-text &nbsp #{@captured_pokemon.pokemon_trainer.first_name}
+    %h5.card-tittle 
+      = t('activerecord.attributes.pokemon_trainer.id_number')
+    %p.card-text &nbsp #{@captured_pokemon.pokemon_trainer.id_number}
+.row.mt-3
+  .offset-3.col-3
+    = link_to t('application.back'), captured_pokemons_path, class: "btn btn-secondary btn-block"

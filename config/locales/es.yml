@@ -1,5 +1,6 @@
 es:
   application:
+    CRUDSdisposable: CRUD Disponibles
     select: Seleccione
     list_of: Lista de %{model}
     new: Nuevo %{model}
@@ -16,14 +17,26 @@ es:
     reject: Cancelar
   activerecord:
     modules:
+      pokemon:
+        one: Pokemon 
+        other: Pokemones
+        any: "."
+      captured_pokemon:
+        one: Captura
+        other: Capturados
       pokemon_trainer:
-        one: Entrenador Pokemon
-        other: Entrenadores Pokemones
+        one: Entrenador 
+        other: Entrenadores 
     attributes:
+      pokemon:
+        name: Nombre
+      captured_pokemon:
+        location: Ubicación
       pokemon_trainer:
         first_name: Nombre
         last_name: Apellido
         region: Región
+        id_number: Identificación
         level: Nivel
         levels:
           high: Alto
