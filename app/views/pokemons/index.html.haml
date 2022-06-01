@@ -2,16 +2,12 @@
   .page.header
     %p{:style => "color: green"}= notice
     %h1.mb-4
-      = "Lista de pokemon"
+      = t("application.list_of", model: t("activerecord.modules.pokemon.other"))
 
   %table.table.table-striped
     %thread
       %tr
-        %th= "Nombre"
-        %th
-        %th
-        %th
-        %th
+        %th= t("activerecord.attributes.pokemon.name")
         %th
         %th
         %th
@@ -22,8 +18,5 @@
           %td
           %td
           %td
-          %td
-          %td
-          %td
-          %td
+  = link_to t("application.menu"), root_path, class: "btn btn-secondary"
 

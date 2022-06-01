@@ -1,18 +1,51 @@
 es:
   application:
-    list_of: Lista
+    start_message: PRIMER PARCIAL - B66142
+    list_of: Lista de %{model}
+    new: Nuevo %{model}
+    new_f: Nueva %{model}
+    see: Ver
+    edit: Editar
+    destroy: Eliminar
+    back: Atrás
+    save: Guardar
+    saving: Guardando...
+    confirm: Desea eliminar %{model}
+    accept: Ok
+    cancel: Cancelar
+    prompt: Seleccione
+    menu: Volver al menú
+    buttons_dashboard:
+      trainers: Entrenadores
+      pokemons: Pókemons
+      captured: Pókemons Capturados
+    controller_message:
+      create: El/La %{model} se ha creado satisfactoriamente.
+      update: El/La %{model} se ha actualizado satisfactoriamente.
+      destroy: El/La %{model} se ha eliminado satisfactoriamente.
   activerecord:
     modules:
       pokemon_trainer:
-        one: "Entrenador pókemon"
-        other: Entrenadores Pókemons
+        one: Entrenador
+        other: Entrenadores
+      captured_pokemon:
+        one: Captura
+        other: Capturas
+      pokemon:
+        one: Pókemon
+        other: Pókemons
     attributes:
       pokemon_trainer: 
         first_name: Nombre
         last_name: Apellido
         region: Región
-        id_number: Número de Identificación
-        levels:
+        id_number: Identificación
+        level: Nivel
+        levels: 
           high: Alto
           medium: Medio
           low: Bajo
+      pokemon:
+        name: Nombre
+      captured_pokemon:
+        location: Locación

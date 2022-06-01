@@ -1,18 +1,18 @@
 = form_for @captured_pokemon, validate: true do |f|
   .form-group.ml-4.mr-4
-    = f.label :location, class: "form-label required"
+    = f.label t("activerecord.attributes.captured_pokemon.location"), class: "form-label required"
     = f.text_field :location, autofocus: true, class: "form-control"
   .form-group.ml-4.mr-4
-    = f.label "Entrenador", class: "form-label required"
-    = f.select(:pokemon_trainer_id, options_for_select(@pokemon_trainers, @captured_pokemon.pokemon_trainer),
-                        {prompt:"Seleccione"}, class:'form-control')   
+    = f.label t("activerecord.modules.pokemon_trainer.one"), class: "form-label required"
+    = f.select(:pokemon_trainer_id, options_for_select(@pokemon_trainers, @captured_pokemon.pokemon_trainer_id),
+                        {prompt:t("application.prompt")}, class:'form-control')   
   .form-group.ml-4.mr-4
-    = f.label "Pókemon", class: "form-label required"
-    = f.select(:pokemon_id, options_for_select(@pokemons, @captured_pokemon.pokemon),
-                        {prompt:"Seleccione"}, class:'form-control')
+    = f.label t("activerecord.modules.pokemon.one"), class: "form-label required"
+    = f.select(:pokemon_id, options_for_select(@pokemons, @captured_pokemon.pokemon_id),
+                        {prompt:t("application.prompt")}, class:'form-control')
 
   .row
     .offset-3.col-3
-      = link_to "Atrás", captured_pokemons_path, class: "btn btn-secondary btn-block"
+      = link_to t("application.back"), captured_pokemons_path, class: "btn btn-secondary btn-block"
     .col-3
-      = button_tag "Guardar" , class: "btn btn-outline-success btn-block", 'data-disable-with': "Guardando"
+      = button_tag t("application.save") , class: "btn btn-outline-success btn-block", 'data-disable-with': t("application.saving")

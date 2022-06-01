@@ -21,29 +21,24 @@ class CapturedPokemonsController < ApplicationController
     @captured_pokemon = CapturedPokemon.new(captured_pokemon_params)
 
       if @captured_pokemon.save
-        redirect_to captured_pokemon_url(@captured_pokemon), notice: "Captured pokemon was successfully created." 
- #       format.json { render :show, status: :created, location: @captured_pokemon }
+        redirect_to captured_pokemon_url(@captured_pokemon), notice: t("application.controller_message.create", model: t("activerecord.modules.captured_pokemon.one"))
       else
         render :new, status: :unprocessable_entity 
- #       format.json { render json: @captured_pokemon.errors, status: :unprocessable_entity }
       end
   end
 
   def update
       if @captured_pokemon.update(captured_pokemon_params)
-        redirect_to captured_pokemon_url(@captured_pokemon), notice: "Captured pokemon was successfully updated."
-  #      format.json { render :show, status: :ok, location: @captured_pokemon }
+        redirect_to captured_pokemon_url(@captured_pokemon), notice: t("application.controller_message.update", model: t("activerecord.modules.captured_pokemon.one"))
       else
         render :edit, status: :unprocessable_entity 
-  #      format.json { render json: @captured_pokemon.errors, status: :unprocessable_entity }
       end
   end
 
   def destroy
     @captured_pokemon.destroy
 
-      redirect_to captured_pokemons_url, notice: "Captured pokemon was successfully destroyed." 
-  #    format.json { head :no_content }
+      redirect_to captured_pokemons_url, notice: t("application.controller_message.destroy", model: t("activerecord.modules.captured_pokemon.one"))
   end
 
   private
@@ -61,4 +56,4 @@ class CapturedPokemonsController < ApplicationController
     def captured_pokemon_params
       params.require(:captured_pokemon).permit(:location, :pokemon_trainer_id, :pokemon_id)
     end
-end
+  end

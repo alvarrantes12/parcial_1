@@ -2,16 +2,16 @@
   .page.header
     %p{:style => "color: green"}= notice
     %h1.mb-4
-      = "Lista de capturas"
+      = t("application.list_of", model: t("activerecord.modules.captured_pokemon.other"))
       .float-right
-        = link_to "Nueva captura", new_captured_pokemon_path, class: "btn btn-primary"
+        = link_to t("application.new_f", model: t("activerecord.modules.captured_pokemon.one")), new_captured_pokemon_path, class: "btn btn-primary"
 
   %table.table.table-striped
     %thread
       %tr
-        %th= "Nombre"
-        %th= "Entrenador"
-        %th= "Pókemon"
+        %th= t("activerecord.attributes.captured_pokemon.location")
+        %th= t("activerecord.modules.pokemon_trainer.one")
+        %th= t("activerecord.modules.pokemon.one")
         %th
         %th
         %th
@@ -25,9 +25,10 @@
           %td= "#{captured_pokemon.pokemon.name}"
           %td
           %td
-          %td= link_to "Ver", captured_pokemon, class: "btn btn-info"
-          %td= link_to "Editar", edit_captured_pokemon_path(captured_pokemon), class: "btn btn-success"
-          %td= link_to "Eliminar", captured_pokemon, method: :delete, class: "btn btn-danger",
-                                  data: {confirm: "Desea eliminarlo",
-                                  accept: "OK",
-                                  reject: "Cancelar"}
+          %td= link_to t("application.see"), captured_pokemon, class: "btn btn-info"
+          %td= link_to t("application.edit"), edit_captured_pokemon_path(captured_pokemon), class: "btn btn-success"
+          %td= link_to t("application.destroy"), captured_pokemon, method: :delete, class: "btn btn-danger",
+                                  data: {confirm: t("application.confirm", model: captured_pokemon.location),
+                                  accept: t("application.accept"),
+                                  reject: t("application.cancel")}      
+  = link_to t("application.menu"), root_path, class: "btn btn-secondary"
