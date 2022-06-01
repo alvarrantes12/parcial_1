@@ -1,12 +1,51 @@
 es:
   application:
-
+    list_of: Lista de %{model}
+    new: Nuevo %{model}
+    show_this: Mostrar %{model}
+    edit_this: Editar %{model}
+    delete_this: Eliminar %{model}
+    available_CRUDs: CRUDs disponibles
+    back: Atras
+    save: Guardar
+    saving: Guardando
+    confirm: Confirmar
+    accept: Aceptar
+    reject: Cancelar
+    tab: Pestaña
+    show: Ver
+    edit: Editar
+    delete: Eliminar
+    want_to_delete: Desea eliminarlo
   activerecord:
     modules:
+      pokemon_trainer: 
+        one: Entrenador pokemon
+        other: Entrenadores pokemon
+      captured_pokemon:
+        one: Pokemon capturado
+        other: Pokemons capturados
+      pokemon:
+        one: Pokemon
+        other: Pokemons
     attributes:
       pokemon_trainer:
+        first_name: Nombre
+        last_name: Apellido
+        region: Región
+        id_number: Identificación
+        level: Nivel
         levels:
           high: Alto
           medium: Medio
           low: Bajo
+        first_name: Nombre
+        last_name: Apellido
 
+      captured_pokemon:
+        location: Locación
+      pokemon:   
+  faq:
+    created: "Se ha creado de manera exitosa."
+    updated: "Se ha actualizado de manera exitosa."
+    destroyed: "Se ha eliminado de manera exitosa."
