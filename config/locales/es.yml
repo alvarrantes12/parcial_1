@@ -1,2 +1,56 @@
 es:
-  hello: "Hello world"
+  application:
+    cruds_available: CRUDs disponibles
+    list_of: Lista del %{model}
+    new: Nuevo %{model}
+    editing_model: Editando %{model}
+    show: Mostrar
+    edit: Editar
+    back: Atras
+    save: Guardar
+    saving: Guardando...
+    delete: Eliminar
+    create: Crear
+    select: Seleccione
+    want_to_delete: Desea eliminar este %{model}
+    was_destroyed: El %{model} ha sido eliminado exitosamente.
+    was_created: El %{model} ha sido creado exitosamente.
+    was_updated: El %{model} ha sido actualizado exitosamente.
+    accept: Aceptar
+    reject: Cancelar
+    can_not_be_saved: "Este %{model} no pude ser guardado por :"
+    
+  activerecord:
+    attributes: 
+
+      pokemon_trainer:
+        first_name: Nombre
+        last_name: Apellido
+        id_number: Codigo
+        region: Region
+        level: Nivel
+        levels:
+          high: Alto
+          medium: Medio
+          low: Bajo
+      
+    modules:
+      pokemon_trainers:
+        one: Entrenador Pokemón
+        other: Entrenadores Pokemón
+
+    errors:
+      models:
+        pokemon_trainer:
+          attributes:
+            first_name:
+              blank: no puede estar vacio
+              too_long: debe tener menos de 10 caracteres
+            last_name:
+              blank: no puede estar vacio
+              too_long: debe tener menos de 15 caracteres
+            id_number:
+              blank: no puede estar vacia
+              taken: ya existe
+              too_short: debe tener más de 8 caracteres
+              too_long: debe tener menos de 10 caracteres
