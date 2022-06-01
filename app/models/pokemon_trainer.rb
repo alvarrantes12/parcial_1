@@ -5,6 +5,6 @@ class PokemonTrainer < ApplicationRecord
 
   has_many :captured_pokemons
   has_many :pokemons, through: :captured_pokemons
-
+  validates :level, presence: true
   enum level: { low: 0, medium: 1, high: 2 }
 end

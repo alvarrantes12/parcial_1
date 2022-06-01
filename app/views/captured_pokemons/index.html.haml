@@ -2,15 +2,17 @@
   .page.header
     %p{:style => "color: green"}= notice
     %h1.mb-4
-      = "Lista de pokemones capturados"
-      .float-right
-        = link_to "Nuevo pokemon capturado", new_captured_pokemon_path, class: "btn btn-primary"
+      = t('application.list_of', model: t('activerecord.modules.captured_pokemons.other'))
+    .float-left.pb-4
+      = link_to t('application.back_to_cruds'), root_path, class: "btn btn-primary"
+    .float-right.pb-4
+      = link_to t('application.new_model', model: t('activerecord.modules.captured_pokemons.one')), new_captured_pokemon_path, class: "btn btn-primary"
   %table.table.table-striped
     %thread
       %tr
-        %th= "Locación"
-        %th= "Entrenador pokemon"
-        %th= "Pokemon"
+        %th= t("activerecord.attributes.captured_pokemon.location")
+        %th= t("activerecord.attributes.captured_pokemon.pokemon_trainer")
+        %th= t("activerecord.attributes.captured_pokemon.pokemon")
         %th
         %th
         %th
@@ -20,10 +22,10 @@
           %td= captured_pokemon.location
           %td= "#{captured_pokemon.pokemon_trainer.first_name} #{captured_pokemon.pokemon_trainer.last_name} - #{captured_pokemon.pokemon_trainer.id_number}"
           %td= captured_pokemon.pokemon.name
-          %td= link_to "Ver", captured_pokemon, class: "btn btn-info"
-          %td= link_to "Editar", edit_captured_pokemon_path(captured_pokemon), class: "btn btn-success"
-          %td= link_to "Eliminar", captured_pokemon, method: :delete, class: "btn btn-danger",
-                                  data: {confirm: "Desea eliminarlo",
-                                  accept: "OK",
-                                  reject: "Cancelar"}
+          %td= link_to t('application.show'), captured_pokemon, class: "btn btn-info"
+          %td= link_to t('application.edit'),  edit_captured_pokemon_path(captured_pokemon), class: "btn btn-success"
+          %td= link_to t('application.delete'), captured_pokemon, method: :delete, class: "btn btn-danger",
+                      data: {confirm: t('application.want_to_delete', model: t('activerecord.modules.captured_pokemons.one')),
+                      accept: t('application.accept'),
+                      reject: t('application.reject')}
 

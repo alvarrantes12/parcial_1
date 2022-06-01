@@ -1,12 +1,13 @@
 .div.m-4
   .page.header
     %h1.mb-4
-      = "Lista de pokemons"
-
+      = t('application.list_of', model: t('activerecord.modules.pokemons.other'))
+    .float-left.pb-4
+      = link_to t('application.back_to_cruds'), root_path, class: "btn btn-primary"
   %table.table.table-striped
     %thread
       %tr
-        %th= "Nombre"
+        %th= t("activerecord.attributes.pokemons.name")
 
     %tbody
       - @pokemons.each do |pokemon|

@@ -18,7 +18,7 @@ class PokemonTrainersController < ApplicationController
 
     if @pokemon_trainer.save
       PokemonService.new.save_pokemon
-      redirect_to pokemon_trainer_url(@pokemon_trainer), notice: "Pokemon trainer was successfully created."
+      redirect_to pokemon_trainer_url(@pokemon_trainer), notice: t("application.was_created", model: t("activerecord.modules.pokemon_trainers.one"))
     else
       render :new, status: :unprocessable_entity
     end
@@ -26,7 +26,7 @@ class PokemonTrainersController < ApplicationController
 
   def update
     if @pokemon_trainer.update(pokemon_trainer_params)
-      redirect_to pokemon_trainer_url(@pokemon_trainer), notice: "Pokemon trainer was successfully updated."
+      redirect_to pokemon_trainer_url(@pokemon_trainer), notice: t("application.was_updated", model: t("activerecord.modules.pokemon_trainers.one"))
     else
       render :edit, status: :unprocessable_entity
     end
@@ -34,8 +34,7 @@ class PokemonTrainersController < ApplicationController
 
   def destroy
     @pokemon_trainer.destroy
-
-    redirect_to pokemon_trainers_url, notice: "Pokemon trainer was successfully destroyed."
+    redirect_to pokemon_trainers_url, notice: t("application.was_destroyed", model: t("activerecord.modules.pokemon_trainers.one"))
   end
 
   private
