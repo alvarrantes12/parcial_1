@@ -2,32 +2,22 @@
   .page.header
     %p{:style => "color: green"}= notice
     %h1.mb-4
-      = "Lista de entrenadores"
-      .float-right
-        = link_to "Nuevo entrenador", new_pokemon_trainer_path, class: "btn btn-primary"
+      = "Lista de pokemones capturados"
+
   %table.table.table-striped
     %thread
       %tr
-        %th= "Nombre"
-        %th= "Apellido" 
-        %th= "Region"
-        %th= "Identificación"
-        %th= "Nivel"
+        %th= "Locación"
         %th
         %th
         %th
     %tbody
-      - @pokemon_trainers.each do |pokemon_trainer|
+      - @captured_pokemons.each do |captured_pokemon|
         %tr
-          %td= pokemon_trainer.first_name
-          %td= pokemon_trainer.last_name
-          %td= pokemon_trainer.region
-          %td= pokemon_trainer.id_number
-          %td= t("activerecord.attributes.pokemon_trainer.levels.#{pokemon_trainer.level}")
+          %td= captured_pokemon.location
           %td= link_to "Ver", pokemon_trainer, class: "btn btn-info"
           %td= link_to "Editar", edit_pokemon_trainer_path(pokemon_trainer), class: "btn btn-success"
           %td= link_to "Eliminar", pokemon_trainer, method: :delete, class: "btn btn-danger",
                                   data: {confirm: "Desea eliminarlo",
                                   accept: "OK",
                                   reject: "Cancelar"}
-
