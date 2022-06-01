@@ -1,2 +1,12 @@
 es:
-  hello: "Hello world"
+  application:
+
+  activerecord:
+    modules:
+    attributes:
+      pokemon_trainer:
+        levels:
+          high: Alto
+          medium: Medio
+          low: Bajo
+
