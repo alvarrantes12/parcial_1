@@ -36,12 +36,8 @@ class CapturedPokemonsController < ApplicationController
   end
   
   def destroy
-    @captured_pokemon.destroy
-
-    respond_to do |format|
-      redirect_to captured_pokemons_url, notice: "Captured pokemon was successfully destroyed." 
-
-    end
+    @captured_pokemon.destroy    
+    redirect_to captured_pokemons_url, notice: "Captured pokemon was successfully destroyed." 
   end
 
   private
@@ -51,7 +47,7 @@ class CapturedPokemonsController < ApplicationController
     end
 
     def captured_pokemon_params
-      params.require(:captured_pokemon).permit(:location)
+      params.require(:captured_pokemon).permit(:location, :pokemon_id, :pokemon_trainer_id)
     end
 
     def set_pokemons
@@ -59,6 +55,6 @@ class CapturedPokemonsController < ApplicationController
     end
 
     def set_pokemon_trainers
-      @pokemon_trainers = PokemonTrainer.all.map{ |pokemon_trainer| ["#{pokemon_trainer.first_name} #{pokemon_trainer.last_name} - #{pokemon_trainer.id_number}", pokemon_trainer.id] }
+      @pokemon_trainers = PokemonTrainer.all.map{ |pokemon_trainer| ["#{pokemon_trainer.first_name} #{pokemon_trainer.last_name} - #{pokemon_trainer.region} -#{pokemon_trainer.id_number}", pokemon_trainer.id] }
     end
 end

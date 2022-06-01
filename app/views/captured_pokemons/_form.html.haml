@@ -5,7 +5,7 @@
 
   .form-group.ml-4.mr-4
     = f.label :pokemon_id, class: "form-label required"
-    = f.select(:pokemon_id, options_for_select(@Pokemons, @captured_pokemon.pokemon),
+    = f.select(:pokemon_id, options_for_select(@pokemons, @captured_pokemon.pokemon),
                         {prompt:"Selecione"}, class:"form-control")
 
   .form-group.ml-4.mr-4
@@ -14,6 +14,6 @@
                         {prompt:"Selecione"}, class:"form-control")
   .row
     .offset-3.col-3
-      = link_to "atras", captured_pokemon_path, class: :"btn btn-secondary btn-block"
+      = link_to "atras", captured_pokemons_path, class: :"btn btn-secondary btn-block"
     .col-3
     = button_tag "Guardar" , class: "btn btn-outline-succes btn-block", 'data-disable-with': "Guardando..."

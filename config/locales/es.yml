@@ -14,6 +14,8 @@ es:
     accept: Aceptar
     reject: Rechazar
     select: Seleccione
+    location: Lugar
+    trainer: Entrenador
   activerecord:
     modules:
       pokemon_trainer:
@@ -22,6 +24,9 @@ es:
       pokemon: 
         one: Pokemon
         other: Pokemones     
+      captured_pokemon:
+        one: captura pokemon
+        other: capturas pokemon
     attributes:      
       pokemon_trainer:
         first_name: Nombre

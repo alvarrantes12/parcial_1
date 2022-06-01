@@ -1,8 +1,16 @@
-%p{:style => "color: green"}= notice
-= render @captured_pokemon
-%div
-  = link_to "Edit this captured pokemon", edit_captured_pokemon_path(@captured_pokemon)
-  |
-  \#{link_to "Back to captured pokemons", captured_pokemons_path}
-  
-  \#{button_to "Destroy this captured pokemon", @captured_pokemon, method: :delete}
+%p#notice= notice
+
+.card.ml-4.mr-4
+  .card-body
+    %h5.card-title 
+    = t('application.name')
+    %p.card-text &nbsp #{@captured_pokemon.location}
+    = t('activerecord.modules.pokemon.one')
+    %p.card-text &nbsp #{@captured_pokemon.pokemon.name}
+    = t('activerecord.modules.pokemon_trainer.one')
+    %p.card-text &nbsp #{@captured_pokemon.pokemon_trainer.first_name} #{@captured_pokemon.pokemon_trainer.last_name}
+
+
+.row.mt-3
+  .offset-3.col-3
+    = link_to t('application.back'), captured_pokemons_path, class: "btn btn-secondary btn-block"
