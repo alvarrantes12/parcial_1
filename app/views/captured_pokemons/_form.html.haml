@@ -12,10 +12,10 @@
     = f.text_field :location, autofocus: true, class: "form-control"
   .form-group.ml-4.mr-4
     = f.label :pokemon_trainer, class: 'form-label required'
-    = f.select(:pokemon_trainer_id, options_for_select(@pokemon_trainers, @pokemon_trainer.pokemon_trainer), {prompt: t('application.select')}, class:'form-control')
+    = f.select(:pokemon_trainer_id, options_for_select(@pokemon_trainers, @captured_pokemon.pokemon_trainer), {prompt: t('application.select')}, class:'form-control')
   .form-group.ml-4.mr-4
     = f.label :pokemon, class: 'form-label required'
-    = f.select(:pokemon_id, options_for_select(@pokemons, @pokemon_trainer.pokemon), {prompt: t('application.select')}, class: 'form-control')
+    = f.select(:pokemon_id, options_for_select(@pokemons, @captured_pokemon.pokemon), {prompt: t('application.select')}, class: 'form-control')
 
   .row
     .offset-3.col-3
