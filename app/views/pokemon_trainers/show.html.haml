@@ -14,8 +14,11 @@
       %h5.card-title
         = "Identificación"
       %p.card-text &nbsp #{@pokemon_trainer.id_number}
+      %h5.card-tittle
+        = "Nivel"
+      %p.card-text &nbsp #{t("activerecord.attributes.pokemon_trainer.levels.#{@pokemon_trainer.level}")}
 
   .row.mt-3
     .offset-3.col-3
-      = link_to "Atrás", pokemon_trainers_path, class: "btn btn-secundary btn-block"
+      = link_to t('application.back_to', model: t('activerecord.modules.pokemon_trainer.other')), pokemon_trainers_path, class: "btn btn-secundary btn-block"
 

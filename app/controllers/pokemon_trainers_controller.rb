@@ -17,7 +17,7 @@ class PokemonTrainersController < ApplicationController
     @pokemon_trainer = PokemonTrainer.new(pokemon_trainer_params)
 
     if @pokemon_trainer.save
-      redirect_to pokemon_trainer_url(@pokemon_trainer), notice: "Pokemon trainer was successfully created."
+      redirect_to pokemon_trainer_url(@pokemon_trainer), notice: t('activerecord.created')
     else
       render :new, status: :unprocessable_entity
     end
@@ -26,7 +26,7 @@ class PokemonTrainersController < ApplicationController
   def update
 
     if @pokemon_trainer.update(pokemon_trainer_params)
-      redirect_to pokemon_trainer_url(@pokemon_trainer), notice: "Pokemon trainer was successfully updated."
+      redirect_to pokemon_trainer_url(@pokemon_trainer), notice: t('activerecord.update')
     else
       render :edit, status: :unprocessable_entity
     end
@@ -36,7 +36,7 @@ class PokemonTrainersController < ApplicationController
   def destroy
     @pokemon_trainer.destroy
 
-    redirect_to pokemon_trainers_url, notice: "Pokemon trainer was successfully destroyed."
+    redirect_to pokemon_trainers_url, notice: t('activerecord.delete')
   end
 
   private
@@ -46,6 +46,6 @@ class PokemonTrainersController < ApplicationController
   end
 
   def pokemon_trainer_params
-    params.require(:pokemon_trainer).permit(:first_name, :last_name, :region, :id_number)
+    params.require(:pokemon_trainer).permit(:first_name, :last_name, :region, :id_number, :level)
   end
 end
