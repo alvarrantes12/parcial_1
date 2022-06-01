@@ -1,0 +1,15 @@
+%p#notice= notice
+
+.card.ml-4.m-4
+  .card-body
+    %h5.card-title Locacion:
+    %p.card-text &nbsp #{@captured_pokemon.location}
+
+.card.ml-4.m-4
+  .card-body
+    %h5.card-title Entrenador:
+    %p.card-text &nbsp #{"#{@captured_pokemon.pokemon_trainer.first_name} #{@captured_pokemon.pokemon_trainer.last_name} - #{@captured_pokemon.pokemon_trainer.region} - #{@captured_pokemon.pokemon_trainer.id_number} - #{@captured_pokemon.pokemon_trainer.level}"}
+
+.row.mt-3
+  .offset-3.col-3
+    = link_to t('application.back', model: t('activerecord.modules.captured_pokemon.other')), captured_pokemons_path, class: "btn btn-secondary btn-block"

@@ -9,14 +9,25 @@ es:
   activerecord:
     modules:
       pokemon_trainer:
-        one: Comediante
-        other: Comediantes
+        one: Entrenador Pokemon
+        other: Entrenadores Pokemon
+      captured_pokemon:
+        one: Pokemon Capturado
+        other: Pokemons Capturados  
+      pokemon:
+        one: Pokemon 
+        other: Pokemons              
   attributes:
       pokemon_trainer:
         first_name: Nombre
         last_name: Apellido
         id_number: Numero de ID
+        level: Nivel
         levels:
           high: Alto
           medium: Medio
-          low: Bajo              
+          low: Bajo
+      captured_pokemon:
+          location: Locacion  
+      pokemon:
+        name: Nombre           

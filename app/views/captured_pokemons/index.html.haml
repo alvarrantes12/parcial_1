@@ -1,0 +1,26 @@
+.div.m-4
+  .page.header
+    %p{:style => "color: green"}= notice
+    %h1.mb-4
+      = "Lista de Pokemons atrapados"
+      .float-right
+        = link_to "Nuevo pokemon", new_captured_pokemon_path, class: "btn btn-primary"
+  %table.table.table-striped
+    %thread
+      %tr
+      %th= t('attributes.captured_pokemon.location')
+      %th= 'Entrenador'
+      %th= 'Pokemon'
+      %th
+    %tbody
+      - @captured_pokemons.each do |captured_pokemon|
+        %tr
+          %td= captured_pokemon.location
+          %td= "#{captured_pokemon.pokemon_trainer.first_name} #{captured_pokemon.pokemon_trainer.last_name} - #{captured_pokemon.pokemon_trainer.region} - #{captured_pokemon.pokemon_trainer.id_number} - #{captured_pokemon.pokemon_trainer.level}"
+          %td= "#{captured_pokemon.pokemon.name}"
+          %td= link_to "Ver", captured_pokemon, class: "btn btn-info"
+          %td= link_to "Editar", edit_captured_pokemon_path(captured_pokemon), class: "btn btn-success"
+          %td= link_to "Eliminar", captured_pokemon, method: :delete, class: "btn btn-danger",
+                                  data: {confirm: "Desea eliminarlo",
+                                  accept: "OK",
+                                  reject: "Cancelar"}

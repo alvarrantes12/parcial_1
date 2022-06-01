@@ -1,0 +1,7 @@
+%h1 Editing captured pokemon
+= render "form", captured_pokemon: @captured_pokemon
+%br/
+%div
+  = link_to "Show this captured pokemon", @captured_pokemon
+  |
+  \#{link_to "Back to captured pokemons", captured_pokemons_path}

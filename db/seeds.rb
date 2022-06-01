@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+PokemonTrainer.create!(first_name: "Paulo", last_name: "Correa", region: "Alola", id_number: 87654321, level: 1)
+PokemonService.new.save_pokemon
