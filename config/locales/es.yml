@@ -1,11 +1,24 @@
 es:
   application:
     list_of: Lista de %{model} 
+    new: Nuevo %{model}
+    edit: Editar %{model}
   activerecord:
     modules:
       pokemon:
         one: Pokemon 
         other: Pokemones
+      pokemon_trainer:
+        one: Entrenador
+        other: Entrenadores
+      states:
+        created: Se ha creado existosamente
+        deleted: Se ha borrado exitosamente
+        updated: Se ha actualizado correctamente
+      botons:
+        delete: Borrar
+        show: Mostrar
+        back: Regresar
     attributes:
       pokemon_trainer:
          first_name: Nombre
@@ -16,3 +29,8 @@ es:
           higth: Alto
           medium: Medio
           low: Bajo
+      pokemon:
+        name: Nombre
+      captured_pokemon:
+      location: locacion
+      

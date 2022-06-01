@@ -1,0 +1,30 @@
+.div.m-4
+  .page.header
+    %p{:style => "color: green"}= notice
+    %h1.mb-4
+      = "Lista de Pokemones Capturados"
+      .float-right
+        = link_to "Nuevo Pokemon Capturado", new_captured_pokemon_path, class: "btn btn-primary"
+  %table.table.table-striped
+    %thread
+      %tr
+        %th= "locacion"
+        %th= "Entrenador"
+        %th= "Pokemon"
+        %th
+    %tbody
+      - @captured_pokemons.each do |captured_pokemon|
+        %tr
+          %td= captured_pokemon.location
+          %td= "#{captured_pokemon.pokemon_trainer.first_name} #{captured_pokemon.pokemon_trainer.last_name} - #{captured_pokemon.pokemon_trainer.id_number}"
+          %td= "#{captured_pokemon.pokemon.name}"
+          %td= link_to t('application.show_this'), captured_pokemon, class: "btn btn-info"
+          %td= link_to t('application.edit_this'), edit_captured_pokemon_path(captured_pokemon), class: "btn btn-success"
+          %td= link_to t('application.delete_this'), captured_pokemon, method: :delete, class: "btn btn-danger",
+                                  data: {confirm: t('application.want_to_delete', model: t('activerecord.modules.pokemon.one')),
+                                  accept: t('application.accept'),
+                                  reject: t('application.reject')}
+
+
+
+
