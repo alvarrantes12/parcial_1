@@ -1,2 +1,15 @@
 es:
-  hello: "Hello world"
+  applicaton:
+    list_of: Lista de %{model}
+    new: Nuevo %{model}
+  activerecord:
+    modules:
+      pokemon_trainer:
+        one: Entrenador Pokemon
+        other: Entrenadores Pokemon
+    attributes:
+      pokemon_trainer:
+        levels:
+          high: Alto
+          medium: Medio
+          low: Bajo 
