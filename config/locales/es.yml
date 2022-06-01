@@ -30,12 +30,21 @@ es:
           low: Bajo
           medium: Medio
           high: Alto
+      captured_pokemon:
+        location: Locación
+      pokemon:
+        name: Nombre
     modules:
       pokemon_trainer:
         one: comendiante  
         first_upper_one: Comendiante
         other: comendiantes
         first_upper_other: Comendiantes
+      captured_pokemon:
+        one: pokemon capturado
+        first_upper_one: Pokemon capturado
+        other: pokemons capturados
+        first_upper_other: Pokemons capturados
     errors:
       models:
         comedian:
