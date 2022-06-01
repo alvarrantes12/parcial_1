@@ -16,8 +16,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_01_003927) do
 
   create_table "captured_pokemons", force: :cascade do |t|
     t.string "location"
+    t.bigint "pokemon_trainer_id"
+    t.bigint "pokemon_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["pokemon_id"], name: "index_captured_pokemons_on_pokemon_id"
+    t.index ["pokemon_trainer_id"], name: "index_captured_pokemons_on_pokemon_trainer_id"
   end
 
   create_table "pokemon_trainers", force: :cascade do |t|

@@ -1,5 +1,7 @@
 class CapturedPokemonsController < ApplicationController
   before_action :set_captured_pokemon, only: %i[ show edit update destroy ]
+  before_action :set_pokemons
+  before_action :set_pokemon_trainers
 
   def index
     @captured_pokemons = CapturedPokemon.all
@@ -41,7 +43,15 @@ class CapturedPokemonsController < ApplicationController
     @captured_pokemon = CapturedPokemon.find(params[:id])
   end
 
+  def set_pokemon_trainers
+    @pokemon_trainers = PokemonTrainer.all.map { |pokemon_trainer| ["#{pokemon_trainer.first_name} #{pokemon_trainer.last_name} - #{pokemon_trainer.region}", pokemon_trainer.id] }
+  end
+
+  def set_pokemons
+    @pokemons = Pokemon.all.pluck(:name, :id)
+  end
+
   def captured_pokemon_params
-    params.require(:captured_pokemon).permit(:location)
+    params.require(:captured_pokemon).permit(:location, :pokemon_trainer_id, :pokemon_id)
   end
 end

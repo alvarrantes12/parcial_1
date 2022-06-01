@@ -9,6 +9,8 @@
     %thread
       %tr
         %th= "Locación"
+        %th= "Entrenador pokemon"
+        %th= "Pokemon"
         %th
         %th
         %th
@@ -16,6 +18,8 @@
       - @captured_pokemons.each do |captured_pokemon|
         %tr
           %td= captured_pokemon.location
+          %td= "#{captured_pokemon.pokemon_trainer.first_name} #{captured_pokemon.pokemon_trainer.last_name} - #{captured_pokemon.pokemon_trainer.id_number}"
+          %td= captured_pokemon.pokemon.name
           %td= link_to "Ver", captured_pokemon, class: "btn btn-info"
           %td= link_to "Editar", edit_captured_pokemon_path(captured_pokemon), class: "btn btn-success"
           %td= link_to "Eliminar", captured_pokemon, method: :delete, class: "btn btn-danger",
