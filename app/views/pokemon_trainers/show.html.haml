@@ -3,16 +3,16 @@
   .card
     .card-body
       %h5.card-title
-        = "Nombre"
+        = t('activerecords.attributes.pokemon_trainer.first_name') 
       %p.card-text &nbsp #{@pokemon_trainer.first_name}
       %h5.card-title
-        = "Apellido"
+        = t('activerecords.attributes.pokemon_trainer.last_name') 
       %p.card-text &nbsp #{@pokemon_trainer.last_name}
       %h5.card-title
-        = "Región"
+        = t('activerecords.attributes.pokemon_trainer.region') 
       %p.card-text &nbsp #{@pokemon_trainer.region}
       %h5.card-title
-        = "Identificación"
+        = t('activerecords.attributes.pokemon_trainer.id_number') 
       %p.card-text &nbsp #{@pokemon_trainer.id_number}
       %h5.card-title= t('activerecords.attributes.pokemon_trainer.level') 
       %p.card-text &nbsp #{t("application.levels.#{@pokemon_trainer.level}")}
@@ -20,5 +20,6 @@
 
   .row.mt-3
     .offset-3.col-3
-      = link_to "Atrás", pokemon_trainers_path, class: "btn btn-secundary btn-block"
+      = link_to link_to t('application.back_to', model: t('application.list_of', model: t('activerecords.modules.pokemon_trainer.other'))),
+                pokemon_trainers_path, class: "btn btn-secondary btn-block"
 

@@ -30,10 +30,14 @@ es:
 
       captured_pokemon:
         location: Lugar
+        created: Poke Capturado creado
+        updated: Poke Capturado editado
+        destroyed: Poke Capturado eliminado
       pokemon_trainer:
         first_name: Nombre
         last_name: Apellido
         id_number: Numero de identificacion
+        region: Región
         level: Nivel
         created: Entrenador creado
         updated: Entrenador editado
