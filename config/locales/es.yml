@@ -1,2 +1,11 @@
 es:
-  hello: "Hello world"
+  application:
+    available_cruds: Crud disponibles
+  activerecord:
+    modules:
+    attributes:
+      pokemon_trainer:
+        levels:
+          low: Bajo
+          medium: Medio
+          high: Alto

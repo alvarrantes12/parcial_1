@@ -4,7 +4,7 @@
     %h1.mb-4
       = "Lista de entrenadores"
       .float-right
-        = link_to "Nuevo entrenado", new_pokemon_trainer_path, class: "btn btn-primary"
+        = link_to "Nuevo entrenador", new_pokemon_trainer_path, class: "btn btn-primary"
   %table.table.table-striped
     %thread
       %tr
@@ -23,6 +23,7 @@
           %td= pokemon_trainer.last_name
           %td= pokemon_trainer.region
           %td= pokemon_trainer.id_number
+          %td= pokemon_trainer.level
           %td= ""
           %td= link_to "Ver", pokemon_trainer, class: "btn btn-info"
           %td= link_to "Editar", edit_pokemon_trainer_path(pokemon_trainer), class: "btn btn-success"
