@@ -21,12 +21,17 @@ es:
     can_not_be_saved: "Este %{model} no pude ser guardado por :"
   activerecord:
     attributes:
-      comedian:
+      pokemon_trainer:
         first_name: Nombre
         last_name: Apellido
-        id_number: identificación
+        id_number: Identificación
+        level: Nivel
+        levels:
+          low: Bajo
+          medium: Medio
+          high: Alto
     modules:
-      comendians:
+      pokemon_trainer:
         one: comendiante  
         first_upper_one: Comendiante
         other: comendiantes

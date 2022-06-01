@@ -14,6 +14,9 @@
       %h5.card-title
         = "Identificación"
       %p.card-text &nbsp #{@pokemon_trainer.id_number}
+      %h5.card-title 
+        =t("activerecord.attributes.pokemon_trainer.level")
+      %p.card-text &nbsp #{t("activerecord.attributes.pokemon_trainer.levels.#{@pokemon_trainer.level}")}
 
   .row.mt-3
     .offset-3.col-3
