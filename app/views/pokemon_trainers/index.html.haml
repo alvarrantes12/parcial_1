@@ -4,18 +4,16 @@
     %h1.mb-4
       = "Lista de entrenadores"
       .float-right
-        = link_to "Nuevo entrenado", new_pokemon_trainer_path, class: "btn btn-primary"
+        = link_to "Nuevo entrenador", new_pokemon_trainer_path, class: "btn btn-primary"
   %table.table.table-striped
     %thread
       %tr
-        %th= "Nombre"
-        %th= "Apellido"
-        %th= "Region"
-        %th= "Identificación"
-        %th= "Nivel"
-        %th
-        %th
-        %th
+        %th= t('activerecord.attributes.pokemon_trainer.first_name')
+        %th= t('activerecord.attributes.pokemon_trainer.last_name')
+        %th= t('activerecord.attributes.pokemon_trainer.region')
+        %th= t('activerecord.attributes.pokemon_trainer.id_number')
+        %th= t('activerecord.attributes.pokemon_trainer.level')
+        %th        
     %tbody
       - @pokemon_trainers.each do |pokemon_trainer|
         %tr
@@ -28,6 +26,6 @@
           %td= link_to "Editar", edit_pokemon_trainer_path(pokemon_trainer), class: "btn btn-success"
           %td= link_to "Eliminar", pokemon_trainer, method: :delete, class: "btn btn-danger",
                                   data: {confirm: "Desea eliminarlo",
-                                  accept: "OK",
+                                  accept: t('application.accept'),
                                   reject: "Cancelar"}
 

@@ -19,15 +19,16 @@ es:
       pokemon_trainer:
         one: Entrenador Pokemon
         other: Entrenadores Pokemon
-      event:
-        one: event
-        other: events
+      pokemon: 
+        one: Pokemon
+        other: Pokemones     
     attributes:      
       pokemon_trainer:
         first_name: Nombre
         last_name: Apellido
         region: Region
         id_number: Numero ID
+        level: Nivel
         levels:
           high: Alto
           medium: Medio

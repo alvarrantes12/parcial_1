@@ -1,0 +1,8 @@
+%p{:style => "color: green"}= notice
+= render @captured_pokemon
+%div
+  = link_to "Edit this captured pokemon", edit_captured_pokemon_path(@captured_pokemon)
+  |
+  \#{link_to "Back to captured pokemons", captured_pokemons_path}
+  
+  \#{button_to "Destroy this captured pokemon", @captured_pokemon, method: :delete}
