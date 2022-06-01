@@ -1,0 +1,2 @@
+json.extract! captured_pokemon, :location, :captured_pokemon.pokemon.name, :captured_pokemon.pokemon_trainer.first_name, :captured_pokemon.pokemon_trainer.last_name
+json.url captured_pokemon_url(captured_pokemon, format: :json)
