@@ -1,0 +1,9 @@
+%div{:id => "#{dom_id captured_pokemon}"}
+  %p
+    %strong Locacion:
+    = captured_pokemon.location
+    %strong Pokemon:
+    = captured_pokemon.pokemon.name 
+    %strong Nombre:
+    = captured_pokemon.pokemon_trainer.name
+        

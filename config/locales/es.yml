@@ -13,6 +13,9 @@ es:
     level: nivel
     do_you_want_to_delete: Desea eliminar el %{model}
     select: Seleccione
+    was_successfuly_created: Fue creado con éxito
+    was_successfuly_updated: Fue eliminado con éxito
+    was_successfuly_deleted: Fue eliminado con éxito
   activerecord:
     modules:
       pokemon_trainer:
@@ -28,4 +31,4 @@ es:
         levels:
           high: Alto
           low: Bajo
-          medium: medio
+          medium: Medio

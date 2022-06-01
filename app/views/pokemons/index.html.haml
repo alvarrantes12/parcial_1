@@ -1,0 +1,18 @@
+.page-header
+  %p{style: "color: green"}= notice
+
+  %h1.mb-4.m-4
+    = 'Lista de pokemones'
+
+%table.table.table-striped
+  %thead
+    %tr
+      %th= 'Nombre de pokemon'
+      %th
+      %th
+      %th
+
+  %tbody
+    - @pokemons.each do |pokemon|
+      %tr
+        %td= pokemon.name

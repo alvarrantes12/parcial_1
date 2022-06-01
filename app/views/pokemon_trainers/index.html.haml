@@ -27,7 +27,7 @@
           %td= link_to t('application.show'), pokemon_trainer, class: "btn btn-info"
           %td= link_to t('application.edit'), edit_pokemon_trainer_path(pokemon_trainer), class: "btn btn-success"
           %td= link_to t('application.delete'), pokemon_trainer, method: :delete, class: "btn btn-danger",
-                                  data: {confirm: t('application.do_you_want_to_delete', model: t('activerecord.pokemon_trainer.one')),
+                                  data: {confirm: t('application.do_you_want_to_delete', model: t('activerecord.modules.pokemon_trainer.one')),
                                   accept: t('aplication.accept'),
                                   reject: t('aplication.cancel')}
 

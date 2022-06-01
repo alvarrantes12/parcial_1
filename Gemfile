@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| 'https://github.com/#{repo}.git' }
 
-ruby '3.0.0'
+ruby '2.7.0'
 
 gem 'bootstrap', '~> 4.1.3'
 gem 'bootsnap', require: false

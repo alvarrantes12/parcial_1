@@ -12,7 +12,7 @@
     = f.label t('activerecord.attributes.pokemon_trainer.id_number'), class: "form-label required"
     = f.number_field :id_number, autofocus: true, class: "form-control"
   .form-group.ml-4.mr-4 
-    = f.label t('application.level'), class: 'form-label required'
+    = f.label t('application.level'), class: "form-label required"
     = f.select(:level, options_for_select(method_level, @pokemon_trainer.level),
                         {prompt: t('application.select')}, class: 'form-control')
   .row
