@@ -8,7 +8,7 @@
     %p.card-text &nbsp #{@captured_pokemon.location}
     %h5.card-title
       = "#{t('activerecord.attributes.captured_pokemon.pokemon_trainer')}:"
-    %p.card-text &nbsp #{@captured_pokemon.pokemon_trainer.first_name} #{@captured_pokemon.pokemon_trainer.last_name} - #{@captured_pokemon.pokemon_trainer.id_number}
+    %p.card-text &nbsp #{@captured_pokemon.pokemon_trainer.first_name} #{@captured_pokemon.pokemon_trainer.last_name} - ID: #{@captured_pokemon.pokemon_trainer.id_number}
     %h5.card-title
       = "#{t('activerecord.attributes.captured_pokemon.pokemon')}:"
     %p.card-text &nbsp #{@captured_pokemon.pokemon.name}

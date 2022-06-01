@@ -44,7 +44,7 @@ class CapturedPokemonsController < ApplicationController
   end
 
   def set_pokemon_trainers
-    @pokemon_trainers = PokemonTrainer.all.map { |pokemon_trainer| ["#{pokemon_trainer.first_name} #{pokemon_trainer.last_name} - #{pokemon_trainer.region} - #{pokemon_trainer.id_number} - #{pokemon_trainer.level}", pokemon_trainer.id] }
+    @pokemon_trainers = PokemonTrainer.all.map { |pokemon_trainer| ["#{pokemon_trainer.first_name} #{pokemon_trainer.last_name} - ID: #{pokemon_trainer.id_number}", pokemon_trainer.id] }
   end
 
   def set_pokemons

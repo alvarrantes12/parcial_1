@@ -1,29 +1,29 @@
 es:
   application:
-    list_of: Lista del %{model}
+    list_of: Lista de %{model}
     new: Nuevo %{model}
     editing_model: Editando %{model}
     show: Mostrar
     edit: Editar
-    back: Atras
+    back: Atrás
     save: Guardar
     saving: Guardando...
     delete: Eliminar
     create: Crear
     select: Seleccione
-    want_to_delete: Desea eliminar este %{model}
+    want_to_delete: ¿Desea eliminar este %{model}?
     was_destroyed: El %{model} ha sido eliminado exitosamente.
     was_created: El %{model} ha sido creado exitosamente.
     was_updated: El %{model} ha sido actualizado exitosamente.
     cruds_available: CRUDs disponibles
     accept: Aceptar
     reject: Cancelar
-    can_not_be_saved: "Este %{model} no pude ser guardado por :"
   activerecord:
     attributes:
       pokemon_trainer:
         first_name: Nombre
         last_name: Apellido
+        region: Región
         id_number: Identificación
         level: Nivel
         levels:
@@ -39,14 +39,14 @@ es:
     modules:
       pokemon_trainer:
         one: entrenador pokemon
-        first_upper_one: Entrenador Pokemon
-        other: entrenadores pokememon
-        first_upper_other: Entrenadores pokemon
+        first_upper_one: Entrenador pokemon
+        other: entrenadores pokemon
+        first_upper_other: Entrenadores Pokemon
       captured_pokemon:
         one: pokemon capturado
         first_upper_one: Pokemon capturado
         other: pokemons capturados
-        first_upper_other: Pokemons capturados
+        first_upper_other: Pokemons Capturados
       pokemon:
         one: pokemon
         first_upper_one: Pokemon

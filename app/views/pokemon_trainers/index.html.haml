@@ -2,16 +2,16 @@
   .page.header
     %p{:style => "color: green"}= notice
     %h1.mb-4
-      = "Lista de entrenadores"
+      = t('application.list_of', model: t('activerecord.modules.pokemon_trainer.other'))
       .float-right
-        = link_to "Nuevo entrenador", new_pokemon_trainer_path, class: "btn btn-primary"
+        = link_to t('application.new', model: t('activerecord.modules.pokemon_trainer.one')), new_pokemon_trainer_path, class: "btn btn-primary"
   %table.table.table-striped
     %thread
       %tr
-        %th= "Nombre"
-        %th= "Apellido"
-        %th= "Region"
-        %th= "Identificación"
+        %th= t('activerecord.attributes.pokemon_trainer.first_name')
+        %th= t('activerecord.attributes.pokemon_trainer.last_name')
+        %th= t('activerecord.attributes.pokemon_trainer.region')
+        %th= t('activerecord.attributes.pokemon_trainer.id_number')
         %th= t("activerecord.attributes.pokemon_trainer.level")
         %th
         %th
@@ -27,7 +27,7 @@
           %td= link_to "Ver", pokemon_trainer, class: "btn btn-info"
           %td= link_to "Editar", edit_pokemon_trainer_path(pokemon_trainer), class: "btn btn-success"
           %td= link_to "Eliminar", pokemon_trainer, method: :delete, class: "btn btn-danger",
-                                  data: {confirm: "Desea eliminarlo",
-                                  accept: "OK",
-                                  reject: "Cancelar"}
+                                  data: {confirm: t('application.want_to_delete', model: t('activerecord.modules.pokemon_trainer.one')),
+                                  accept: t('application.accept'),
+                                  reject: t('application.reject')}
 
