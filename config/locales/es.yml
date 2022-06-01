@@ -54,19 +54,3 @@ es:
       captured_pokemons:
         one: Pokémon capturado
         other: Pokemones capturados
-
-    errors:
-      models:
-        pokemon_trainer:
-          attributes:
-            first_name:
-              blank: no puede estar vacio
-              too_long: debe tener menos de 10 caracteres
-            last_name:
-              blank: no puede estar vacio
-              too_long: debe tener menos de 15 caracteres
-            id_number:
-              blank: no puede estar vacia
-              taken: ya existe
-              too_short: debe tener más de 8 caracteres
-              too_long: debe tener menos de 10 caracteres

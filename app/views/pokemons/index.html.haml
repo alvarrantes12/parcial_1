@@ -2,9 +2,7 @@
   .page-header
     %h1.mb-4
       = t('application.list_of', model: t('activerecord.modules.pokemons.other'))
-    .float-right
-      = link_to t('application.new', model: t('activerecord.modules.pokemons.one')), new_pokemon_path, class: "btn btn-primary"
-
+    
   %table.table.table-striped
     %thread
       %tr
