@@ -1,0 +1,15 @@
+.div.m-4
+  .page.header
+    %h1.mb-4
+      = "Lista de pokemons"
+
+  %table.table.table-striped
+    %thread
+      %tr
+        %th= "Nombre"
+
+    %tbody
+      - @pokemons.each do |pokemon|
+        %tr
+          %td= pokemon.name
+
