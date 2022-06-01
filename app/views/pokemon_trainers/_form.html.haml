@@ -11,9 +11,13 @@
   .form-group.ml-4.mr-4
     = f.label :id_number, class: "form-label required"
     = f.number_field :id_number, autofocus: true, class: "form-control"
+  .form-group.ml-4.mr-4
+    = f.label :level, class: "form-label required"
+    = f.select(:level, options_for_select(levels, @pokemon_trainer.level),
+                  {prompt:"Seleccione"}, class: "form-control")
 
   .row
     .offset-3.col-3
-      = link_to "Atrás", pokemon_trainers_path, class: "btn btn-secondary btn-block"
+      = link_to t('application.back'), pokemon_trainers_path, class: "btn btn-secondary btn-block"
     .col-3
-      = button_tag "Guardar" , class: "btn btn-outline-success btn-block", 'data-disable-with': "Guardando"
+      = button_tag "Guardar" , class: "btn btn-outline-success btn-block", 'data-disable-with': t('application.saving')

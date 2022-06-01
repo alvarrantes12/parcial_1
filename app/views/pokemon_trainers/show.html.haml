@@ -14,8 +14,11 @@
       %h5.card-title
         = "Identificación"
       %p.card-text &nbsp #{@pokemon_trainer.id_number}
+      %h5.card-title
+        = "Nivel"
+      %p.card-text &nbsp #{@pokemon_trainer.level}
 
   .row.mt-3
     .offset-3.col-3
-      = link_to "Atrás", pokemon_trainers_path, class: "btn btn-secundary btn-block"
+      = link_to t('application.back'), pokemon_trainers_path, class: "btn btn-secundary btn-block"
 

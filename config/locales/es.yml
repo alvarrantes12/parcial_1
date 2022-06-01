@@ -1,2 +1,21 @@
 es:
-  hello: "Hello world"
+  hello: "Hola mundo"
+  application:
+    list_of: Lista de
+    new: Nuevo
+    show_this: Mostrar
+    edit_this: Editar
+    delete_this: Eliminar
+    back: Atrás
+    save: Guardar
+    saving: Guardando
+    editing: Editando
+    want_to_delete: Desea eliminarlo
+    accept: Aceptar
+    reject: Cancelar
+  activerecord:
+    modules:
+      pokemon_trainer:
+        levels: nivel
+        one: Entrenador Pokemon
+        other: Entrenadores Pokemon
