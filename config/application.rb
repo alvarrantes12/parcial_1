@@ -11,7 +11,14 @@ module Lenguajes1
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
-    I18n.load_path += Dir[Rails.root.join('config', 'locales', '*.{yml}')]
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins "*"
+        resource "*", headers: :any, methods: [:get, :post, :options]
+      end
+    end
+
+    I18n.load_path += Dir[Rails.root.join("config", "locales", "*.{yml}")]
     I18n.default_locale = :es
   end
 end
