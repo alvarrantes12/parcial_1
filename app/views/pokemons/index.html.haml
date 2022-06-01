@@ -1,0 +1,14 @@
+.div.m-4
+  .page.header
+    %p{:style => "color: green"}= notice
+    %h1.mb-4
+      = "Lista de Pokemons"
+  %table.table.table-striped
+    %thread
+      %tr
+        %th= "Nombre"
+
+    %tbody
+      - @pokemons.each do |pokemons|
+        %tr
+          %td= pokemons.name
