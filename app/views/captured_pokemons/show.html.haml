@@ -1,0 +1,22 @@
+.page-header.m-4
+  %p{:style => "color: green"}= notice
+
+.card.ml-4.m-4
+  .card-body
+    %h5.card-title= t('activerecords.attributes.captured_pokemon.location') 
+    %p.card-text &nbsp #{@captured_pokemon.location}
+
+.card.ml-4.m-4
+  .card-body
+    %h5.card-title= "Pokemon"
+    %p.card-text &nbsp #{@captured_pokemon.pokemon.name}
+
+.card.ml-4.m-4
+  .card-body
+    %h5.card-title= "Entrenador"
+    %p.card-text &nbsp #{@captured_pokemon.pokemon_trainer.first_name}
+
+.row.mt-3
+  .offset-3.col-3
+    = link_to t('application.back_to', model: t('application.list_of', model: t('activerecords.modules.captured_pokemon.other'))),
+                captured_pokemons_path, class: "btn btn-secondary btn-block"

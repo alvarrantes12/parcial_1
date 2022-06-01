@@ -20,11 +20,16 @@ es:
     
   activerecords:
     modules:
+      captured_pokemon:
+        one: Pokemon Capturado
+        other: Pokemon Capturados
       pokemon_trainer:
         one: Entrenador Pokemon
         other: Entrenadores Pokemon
     attributes:
 
+      captured_pokemon:
+        location: Lugar
       pokemon_trainer:
         first_name: Nombre
         last_name: Apellido

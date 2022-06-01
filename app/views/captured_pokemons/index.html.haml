@@ -1,0 +1,27 @@
+.page-header.m-4
+  %p{:style => "color: green"}= notice
+
+  %h1.mb-4
+    = t('application.list_of', model: t('activerecords.modules.captured_pokemon.other'))
+    .float-right
+      = link_to t('application.new_of', model: t('activerecords.modules.captured_pokemon.one')),
+                new_captured_pokemon_path, class: "btn btn-primary"
+%table.table.table-striped
+  %thread
+    %tr
+      %th= t('activerecords.attributes.captured_pokemon.location')
+      %th= "Pokemon"
+      %th= "Entrenador"
+
+  %tbody
+    - @captured_pokemons.each do |captured_pokemon|
+      %tr
+        %td= captured_pokemon.location
+        %td= captured_pokemon.pokemon.name
+        %td= captured_pokemon.pokemon_trainer.first_name
+        %td= link_to t('application.show'), captured_pokemon, class: "btn btn-info"
+        %td= link_to t('application.edit'), edit_captured_pokemon_path(captured_pokemon), class: "btn btn-success"
+        %td= link_to t('application.delete'), captured_pokemon, method: :delete, class: "btn btn-danger", 
+                        data: {confirm: t('application.delete_confirmation', model: t('activerecords.modules.captured_pokemon.one')),
+                        accept: t('application.accept'),
+                        reject: t('application.cancel')}

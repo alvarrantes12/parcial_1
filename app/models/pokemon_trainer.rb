@@ -7,7 +7,11 @@ class PokemonTrainer < ApplicationRecord
     validates :id_number, presence: true, uniqueness: true
     validates_length_of :id_number, maximum: 10, minimum: 8
 
+    has_many :captured_pokemons
+    has_many :pokemons, through: :captured_pokemons 
+
 
     enum level: { high: 0, medium: 1, low: 2 }
+
 
 end
