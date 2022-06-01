@@ -4,9 +4,8 @@ Rails.application.routes.draw do
   resources :pokemons
   root "dashboards#index"
 
-  #scope module: :api do
-   # resources :captured_pokemons
-
-  #end
+  scope module: :api, path: "api" do
+    resources :captured_pokemons
+  end
 
 end
