@@ -1,2 +1,18 @@
 es:
-  hello: "Hello world"
+  application:
+    list_of: Lista
+  activerecord:
+    modules:
+      pokemon_trainer:
+        one: "Entrenador pókemon"
+        other: Entrenadores Pókemons
+    attributes:
+      pokemon_trainer: 
+        first_name: Nombre
+        last_name: Apellido
+        region: Región
+        id_number: Número de Identificación
+        levels:
+          high: Alto
+          medium: Medio
+          low: Bajo
