@@ -1,0 +1,17 @@
+.div.m-4
+  .page.header
+    %p{:style => "color: green"}= notice
+    %h1.mb-4
+      = "Lista de pokemons"
+  %table.table.table-striped
+    %thread
+      %tr
+        %th= "Nombre"
+        %th
+        %th
+        %th
+    %tbody
+      - @pokemon_trainers.each do |pokemon_trainer|
+        %tr
+          %td= pokemon.name
+          %td= link_to "Ver", pokemon, class: "btn btn-info"
