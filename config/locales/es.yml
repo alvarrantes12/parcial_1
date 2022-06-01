@@ -1,2 +1,35 @@
-es:
-  hello: "Hello world"
+es: 
+  application:
+    show: Mostrar
+    delete: Borrar
+    edit: Editar
+    accept: Aceptar
+    cancel: Cancelar 
+    list_of: Lista de %{model}
+    edit_of: Editar %{model}
+    new_of: Nuevo %{model}
+    save: Guardar
+    saving: Guardando...
+    back_to: Regresar a %{model}
+    availables: Los %{model} disponibles 
+    delete_confirmation: Desea eliminar el %{model}
+    levels:
+      high: Alto
+      medium: Medio
+      low: Bajo
+    
+  activerecords:
+    modules:
+      pokemon_trainer:
+        one: Entrenador Pokemon
+        other: Entrenadores Pokemon
+    attributes:
+
+      pokemon_trainer:
+        first_name: Nombre
+        last_name: Apellido
+        id_number: Numero de identificacion
+        level: Nivel
+        created: Entrenador creado
+        updated: Entrenador editado
+        destroyed: Entrenador eliminado
