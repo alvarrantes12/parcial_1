@@ -1,2 +1,18 @@
 es:
-  hello: "Hello world"
+  application:
+    list_of: Lista de %{model} 
+  activerecord:
+    modules:
+      pokemon:
+        one: Pokemon 
+        other: Pokemones
+    attributes:
+      pokemon_trainer:
+         first_name: Nombre
+         last_name: Apellido
+         id_number: Identificacion
+      pokemon_trainer:
+        levels:
+          higth: Alto
+          medium: Medio
+          low: Bajo
