@@ -33,11 +33,18 @@ es:
           high: Alto
           medium: Medio
           low: Bajo
-      
+
+      pokemon:
+        name: Nombre
+
     modules:
       pokemon_trainers:
         one: Entrenador Pokemón
         other: Entrenadores Pokemón
+        
+      pokemons:
+        one: Pokemón
+        other: Pokemones
 
     errors:
       models:
