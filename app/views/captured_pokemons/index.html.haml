@@ -9,12 +9,15 @@
   %thread
     %tr
       %th= t('activerecord.attributes.captured_pokemon.location')
-      %th
+      %th= t("activerecord.modules.pokemon_trainers.one")
+      %th= t("activerecord.modules.pokemons.one")
 
   %tbody
     - @captured_pokemons.each do |captured_pokemon|
       %tr
         %td= captured_pokemon.location
+        %td= "#{captured_pokemon.pokemon_trainer.first_name} #{captured_pokemon.pokemon_trainer.last_name} - #{captured_pokemon.pokemon_trainer.id_number}"
+        %td= captured_pokemon.pokemon.name
         %td= link_to t('application.show'), captured_pokemon, class: "btn btn-info"
         %td= link_to t('application.edit'),  edit_captured_pokemon_path(captured_pokemon), class: "btn btn-success"
         %td= link_to t('application.delete'), captured_pokemon, method: :delete, class: "btn btn-danger",

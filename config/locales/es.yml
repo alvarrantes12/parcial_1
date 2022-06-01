@@ -39,6 +39,8 @@ es:
 
       captured_pokemon:
         location: Locación
+        pokemon: Pokémon
+        pokemon_trainer: Entrenador Pokemón
 
     modules:
       pokemon_trainers:
